@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="contactosApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Agenda de contactos</title>
+
+    <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="app/estilo.css">
+
+    <script src="app/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app/bower_components/angular/angular.min.js"></script>
+    <script src="app/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="app/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/services.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/controllers.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="navbar navbar-default text-center">
+            <h1 class="navbar-text">Agenda de contactos - AngularJS</h1>
+        </div>
+      </div>
+      <div ng-view></div>
+    </div>
+  </body>
+</html>
