@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="contactosApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Agenda de contactos</title>
+    <!-- Css bibliotecas -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- ./Css bibliotecas -->
+
+    <!-- Css del proyecto -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- /.Css del proyecto -->
+
+    <!-- Bibliotecas -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <!-- /.Bibliotecas -->
+
+    <!-- Scripts del proyecto -->
+    <script src="js/app.js"></script>
+    <script src="js/services/services.js"></script>
+    <script src="js/services/contacto-services.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/controllers/controllers.js"></script>
+    <script src="js/controllers/contacto-lista-controller.js"></script>
+    <!-- /.Scripts del proyecto -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="navbar navbar-default text-center">
+            <h1 class="navbar-text">Agenda de contactos - AngularJS</h1>
+        </div>
+      </div>
+      <div ng-view></div>
+    </div>
+  </body>
+</html>

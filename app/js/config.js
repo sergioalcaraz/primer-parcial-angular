@@ -2,15 +2,15 @@ contactosApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/layout/lista.html',
+        templateUrl: 'views/contactos-lista.html',
         controller: 'ContactosListaController'
       })
       .when('/crear', {
-        templateUrl: 'app/layout/crear.html',
+        templateUrl: 'views/contactos-crear.html',
         controller: 'ContactosCrearController'
       })
       .when('/modificar/:id', {
-        templateUrl: 'app/layout/modificar.html',
+        templateUrl: 'views/contactos-modificar.html',
         controller: 'ContactosModificarController'
       })
   }
