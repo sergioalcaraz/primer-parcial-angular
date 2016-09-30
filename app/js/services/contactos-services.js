@@ -1,7 +1,7 @@
 // Servicio para realizar peticiones al rest-api
-contactosServices.factory('Contactos', ['$resource',
-    function($resource) {
-        return $resource('http://163.172.218.124/pwf/rest/agenda/:id', {'id': '@id'}, {
+contactosServices.factory('Contactos', ['$resource', '$location',
+    function($resource, $location) {
+        return $resource($location.protocol() + '://163.172.218.124/pwf/rest/agenda/:id', {'id': '@id'}, {
             query: {
                 isArray: false
             },
