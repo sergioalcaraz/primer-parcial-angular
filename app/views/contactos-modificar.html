@@ -1,45 +1,60 @@
 <div class="row">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h2>Modificar contacto</h2>
-    </div>
-    <div class="panel-body">
-      <form>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Nombre</label>
-            <input class="form-control" type="text" ng-model="contacto.nombre">
-          </div>
-          <div class="form-group">
-            <label>Apellido</label>
-            <input class="form-control" type="text" ng-model="contacto.apellido">
-          </div>
-          <div class="form-group">
-            <label>Alias</label>
-            <input class="form-control" type="text" ng-model="contacto.alias">
-          </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2>Modificar contacto</h2>
         </div>
+        <div class="panel-body">
+            <form name="contactoForm">
+                <div class="col-md-6" ng-show="mostrar">
+                    <div class="form-group" ng-class="{'has-error': contactoForm.nombre.$touched && contactoForm.nombre.$invalid}">
+                        <label class="required">Nombre</label>
+                        <input class="form-control" type="text" name="nombre" ng-model="contacto.nombre" required>
+                        <div ng-show="contactoForm.nombre.$touched && contactoForm.nombre.$invalid">
+                            <span ng-show="contactoForm.nombre.$error.required">Este campo es obligatorio</span>
+                        </div>
 
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Telefono</label>
-            <input class="form-control" type="text" ng-model="contacto.telefono">
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input class="form-control" type="text" ng-model="contacto.email">
-          </div>
-          <div class="form-group">
-            <label>Direccion</label>
-            <input class="form-control" type="text" ng-model="contacto.direccion">
-          </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error': contactoForm.apellido.$touched && contactoForm.apellido.$invalid}">
+                        <label class="required">Apellido</label>
+                        <input class="form-control" type="text" name="apellido" ng-model="contacto.apellido" required>
+                        <div ng-show="contactoForm.apellido.$touched && contactoForm.apellido.$invalid">
+                            <span ng-show="contactoForm.apellido.$error.required">Este campo es obligatorio</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Alias</label>
+                        <input class="form-control" type="text" ng-model="contacto.alias">
+                    </div>
+                </div>
+
+                <div class="col-md-6" ng-show="mostrar">
+                    <div class="form-group" ng-class="{'has-error': contactoForm.telefono.$touched && contactoForm.telefono.$invalid}">
+                        <label class="required">Teléfono</label>
+                        <input class="form-control" type="number" name="telefono" ng-model="contacto.telefono" required>
+                        <div ng-show="contactoForm.telefono.$touched && contactoForm.telefono.$invalid">
+                            <span ng-show="contactoForm.telefono.$error.required">Este campo es obligatorio</span>
+                            <span ng-show="contactoForm.telefono.$error.number">Ingrese solo números</span>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error': contactoForm.email.$touched && contactoForm.email.$invalid}">
+                        <label class="required">Email</label>
+                        <input class="form-control" type="email" name="email" ng-model="contacto.email" required>
+                        <div ng-show="contactoForm.email.$touched && contactoForm.email.$invalid">
+                            <span ng-show="contactoForm.email.$error.required">Este campo es obligatorio</span>
+                            <span ng-show="contactoForm.email.$error.email">Direccion de correo no es válido</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Dirección</label>
+                        <input class="form-control" type="text" name="direccion" ng-model="contacto.direccion">
+                    </div>
+                </div>
+                <button ng-disabled="contactoForm.$invalid && !contactoForm.$dirty" class="btn btn-default" ng-click="modificar()">Modificar</button>
+                <a class="btn btn-default" ng-href="{{'#/'}}">Ir a la lista</a>
+            </form>
         </div>
-        <button class="btn btn-default" ng-click="modificar()">Modificar</button>
-        <a class="btn btn-default" ng-href="{{'#/'}}">Ir a la lista</a>
-      </form>
+        <div class="panel-footer">
+            Primer Parcial - Electiva 2
+        </div>
     </div>
-    <div class="panel-footer">
-      Primer Parcial - Electiva 2
-    </div>
-  </div>
 </div>
