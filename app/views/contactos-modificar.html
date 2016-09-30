@@ -49,7 +49,7 @@
                         <input class="form-control" type="text" name="direccion" ng-model="contacto.direccion">
                     </div>
                 </div>
-                <button ng-disabled="contactoForm.$invalid && !contactoForm.$dirty" class="btn btn-default" ng-click="modificar()">Modificar</button>
+                <button ng-disabled="contactoForm.$invalid || !contactoForm.$dirty" class="btn btn-default" ng-click="modificar()">Modificar</button>
                 <a class="btn btn-default" ng-href="{{'#/'}}">Ir a la lista</a>
             </form>
         </div>
