@@ -1,8 +1,8 @@
 // Controlador para la vista principal
-contactosControllers.controller('ContactosListaController', ['$scope', 'Contactos',
+contactosControllers.controller('ContactosListaCtrl', ['$scope', 'Contactos',
     function($scope, Contactos) {
         $scope.contactos = Contactos.query()
-        
+
         $scope.eliminar = function(contactoId) {
 
             if (confirm('¿Desea eliminar el contacto?')) {

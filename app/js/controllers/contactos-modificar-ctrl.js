@@ -1,5 +1,5 @@
 // Controlador para la modificacion de contactos
-contactosControllers.controller('ContactosModificarController', ['$scope', '$location', '$routeParams', 'Contactos',
+contactosControllers.controller('ContactosModificarCtrl', ['$scope', '$location', '$routeParams', 'Contactos',
     function($scope, $location, $routeParams, Contactos) {
         $scope.mostrar = false
         $scope.contacto = Contactos.get({

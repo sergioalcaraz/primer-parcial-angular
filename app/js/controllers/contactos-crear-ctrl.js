@@ -1,5 +1,5 @@
 // Controlador para la creacion de contactos
-contactosControllers.controller('ContactosCrearController', ['$scope', '$location', 'Contactos',
+contactosControllers.controller('ContactosCrearCtrl', ['$scope', '$location', 'Contactos',
     function($scope, $location, Contactos) {
         $scope.crear = function() { // Funcion disparado al hacer submit los datos
             if (!$scope.contacto.alias) {

@@ -6,13 +6,16 @@
         <div class="panel-body">
             <form name="contactoForm">
                 <div class="col-md-6" ng-show="mostrar">
+                    <div class="form-group">
+                      <label>Número de contacto</label>
+                      <p>{{contacto.id}}</p>
+                    </div>
                     <div class="form-group" ng-class="{'has-error': contactoForm.nombre.$touched && contactoForm.nombre.$invalid}">
                         <label class="required">Nombre</label>
                         <input class="form-control" type="text" name="nombre" ng-model="contacto.nombre" required>
                         <div ng-show="contactoForm.nombre.$touched && contactoForm.nombre.$invalid">
                             <span ng-show="contactoForm.nombre.$error.required">Este campo es obligatorio</span>
                         </div>
-
                     </div>
                     <div class="form-group" ng-class="{'has-error': contactoForm.apellido.$touched && contactoForm.apellido.$invalid}">
                         <label class="required">Apellido</label>
@@ -47,6 +50,10 @@
                     <div class="form-group">
                         <label>Dirección</label>
                         <input class="form-control" type="text" name="direccion" ng-model="contacto.direccion">
+                    </div>
+                    <div class="form-group">
+                      <label>Fecha creación</label>
+                      <p>{{contacto.fechacreacion | date:'dd-MM-yyyy'}}</p>
                     </div>
                 </div>
                 <button ng-disabled="contactoForm.$invalid || !contactoForm.$dirty" class="btn btn-default" ng-click="modificar()">Modificar</button>

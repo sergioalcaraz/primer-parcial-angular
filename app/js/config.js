@@ -4,15 +4,15 @@ contactosApp.config(['$routeProvider',
         $routeProvider
             .when('/', {
                 templateUrl: 'views/contactos-lista.html',
-                controller: 'ContactosListaController'
+                controller: 'ContactosListaCtrl'
             })
             .when('/crear', {
                 templateUrl: 'views/contactos-crear.html',
-                controller: 'ContactosCrearController'
+                controller: 'ContactosCrearCtrl'
             })
             .when('/modificar/:id', {
                 templateUrl: 'views/contactos-modificar.html',
-                controller: 'ContactosModificarController'
+                controller: 'ContactosModificarCtrl'
             })
     }
 ])
