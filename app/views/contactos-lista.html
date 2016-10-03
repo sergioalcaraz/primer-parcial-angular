@@ -9,7 +9,8 @@
                 <div class="form-group">
                     <label for="buscar">Buscar:
                     </label>
-                    <input type="text" class="form-control" id="buscar" name="buscar" placeholder="Buscar" ng-model="buscar">
+                    <input type="text" class="form-control" id="filtro-paginado" name="filtro-paginado" placeholder="Buscar" ng-model="filtroPaginado" ng-change="cambioFiltro()" ng-model-options="{debounce:500}">
+                    <select ng-model="numPerPage" ng-options="x for x in selectOption" ng-change="cambioItemsPerPage()"></select>
                 </div>
             </form>
         </div>
@@ -29,7 +30,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="contacto in contactos.lista | filter:buscar">
+                        <tr ng-repeat="contacto in contactos.lista">
                             <td>{{contacto.id}}</td>
                             <td>{{contacto.nombre}}</td>
                             <td>{{contacto.apellido}}</td>
@@ -52,7 +53,7 @@
             </div>
         </div>
         <div class="panel-footer">
-            Primer Parcial - Electiva 2
+            <ul uib-pagination next-text="Siguiente" previous-text="Anterior" total-items="contactos.total" items-per-page="itemsPerPage" ng-model="paginaActual" ng-change="paginaCambiada()" ng-show="contactos.total"></ul>
         </div>
     </div>
 </div>
