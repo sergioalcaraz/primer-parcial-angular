@@ -1,7 +1,7 @@
 # Electiva II programación front-end
 # Primer Parcial - Agenda - AngularJS
 Examen primer parcial correspondiente a la materia Electiva II programación front-end de la Facultad Politécnica - UNA.
-Agenda de contactos implementado utilizando el framework front-end AngularJS.
+Agenda de contactos implementado con el framework front-end AngularJS.
 La agenda provee un CRUD básico de contactos consumiendo un API REST proveido por un servidor tercero.
 
 ## Integrantes
