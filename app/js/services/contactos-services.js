@@ -2,7 +2,8 @@
 contactosServices.factory('Contactos', ['$resource', '$location',
     function($resource, $location) {
         // multiples protocolos
-        return $resource($location.protocol() + '://163.172.218.124/pwf/rest/agenda/:id', {'id': '@id'}, {
+        var dominio = $location.protocol() == 'http' ? '163.172.218.124' : 'desa03.konecta.com.py'
+        return $resource($location.protocol() + '://' + dominio + '/pwf/rest/agenda/:id', {'id': '@id'}, {
             query: {
                 isArray: false
             },
